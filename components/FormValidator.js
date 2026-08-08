@@ -34,29 +34,29 @@ export class FormValidator {
         }
     };
 
-    disableButton = () => {
+    _disableButton = () => {
         this.buttonElement.classList.remove(this.settings.inactiveButtonClass);
         this.buttonElement.disabled = false;
     }
 
-    enableButton = () => {
+    _enableButton = () => {
         this.buttonElement.classList.add(this.settings.inactiveButtonClass);
         this.buttonElement.disabled = true;
     }
 
-    toggleButtonState = () => {
+    _toggleButtonState = () => {
         if (this._hasInvalidInput()) {
-            this.enableButton();
+            this._enableButton();
         } else {
-            this.disableButton();
+            this._disableButton();
         }
     };
     
     _setEventListeners = () => {
-        this.toggleButtonState();
+        this._toggleButtonState();
         this.inputElement.addEventListener("input", () => {
             this._checkInputValidity();
-            this.toggleButtonState();
+            this._toggleButtonState();
         });
     };
 
@@ -71,6 +71,6 @@ export class FormValidator {
         this.inputList.forEach(input => {
             input.value = "";
         });
-        this.disableButton();
+        this._disableButton();
     }
 }
