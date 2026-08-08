@@ -37,7 +37,7 @@ export const initialTodos = [
   },
   {
     id: "aa486839-63ab-437f-b8a2-293453346bvv4f",
-    name: "Reserach Saturn in Aries",
+    name: "Research Saturn in Aries",
     completed: false,
     date: new Date(),
   },

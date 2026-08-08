@@ -1,14 +1,14 @@
-# Simple Todo App
+# Victor's Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+A Simple Todo List App for keeping track of everyday tasks. You can Add items as they come to mind, check them Off when they're done, and remove anything you no longer need. A straightforward list to help you stay on top of Chores and Activities.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+The Simple Todo List App uses simple validation and checking to verify that your Todos are right on as current as possible.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+I mainly used VSCode and simple Validation tricks to make sure the experience is smooth and convenient for the user.
 
 ## Deployment
 
