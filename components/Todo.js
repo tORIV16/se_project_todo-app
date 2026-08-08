@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 class Todo {
     constructor(data, template, id) {
         this._data = data;
-        this.id = data.id; // uuidv4();
+        this.id = data.id ? data.id : uuidv4();
         this.template = template;
         this._todoElement = template.content.querySelector(".todo").cloneNode(true);
         this.label = this._todoElement.querySelector(".todo__label");
@@ -12,12 +12,6 @@ class Todo {
         this.checkbox = this._todoElement.querySelector(".todo__completed");
         this.deleteButton = this._todoElement.querySelector(".todo__delete-btn");
     };
-
-    _setIds() {
-        if (!this.id) {
-            this.id = uuidv4();
-        }
-    }
 
     _setEventListeners() {
         this.deleteButton.addEventListener("click", () => {
@@ -42,7 +36,6 @@ class Todo {
             day: "numeric",
             })}`;
         }
-        this._setIds()
         this._generateCheckedBoxes();
         this._setEventListeners();
         return this._todoElement;
